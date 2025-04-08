@@ -1,0 +1,34 @@
+:root {
+    --text-pink: #ff56bc;
+    --text-purple: #a332ff;
+    --text-black: #131313;
+}
+
+
+.welcome-info {
+    background: url(../images/bg1.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+    font-size: 100px;
+}
+
+.text-pink {
+    color: var(--text-pink);
+
+}
+
+.text-purple {
+    color: var(--text-purple);
+}
+
+.text-black {
+    color: var(--text-black);
+}
+
+.icon {
+    font-size: 50px;
+}
