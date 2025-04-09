@@ -2,6 +2,8 @@
     --text-pink: #ff56bc;
     --text-purple: #a332ff;
     --text-black: #131313;
+    --bg-gray: #dfdfdf;
+    --bg-light: #ececec;
 }
 
 
@@ -31,4 +33,13 @@
 
 .icon {
     font-size: 50px;
+}
+
+.bg-gray {
+    background-color: var(--bg-gray);
+}
+
+.logo {
+    width: 75px;
+    
 }
