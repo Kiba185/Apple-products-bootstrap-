@@ -5,232 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/_custom.css">
+    <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="js/bootstrap.bundle.js">
     <link rel="stylesheet" href="js/bootstrap.js">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
 </head>
-<body class="bg-light">
-<header>
+<body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <img class="p-3" src="images/logo.png" href="#">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#products">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#team">Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-                <div>
-                    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#adminModal">Admin</button>
-                </div>
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link" href="#">Features</a>
+              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
             </div>
+          </div>
         </div>
-    </nav>
-</header>
-
-<!-- Modal -->
-<div class="modal fade" id="adminModal" tabindex="-1" aria-labelledby="adminModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Admin login</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="mb-3 form-check">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                    </div>
-                    <button type="submit" class="btn btn-secondary">
-                        <a href="admin.html" class="nav-link text-white">Submit</a>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-<main>
-    <section class="welcome-info mx-3 mb-5">
-        <div class="container text-center ">
-            <h1 class="text-center m-5 text-black h-100">Explore Apple World</h1>
-        </div>
-    </section>
-    <section id="products">
-        <div class="container px-4 text-center mb-5">
-            <h2 class="text-center m-5">Our Products</h2>
-            <div class="row gx-5 gy-5">
-                <div class="col-lg-4">
-                    <div class="card p-3">
-                        <img src="images/iphone_16.webp" class="card-img-top" alt="iphone">
-                        <div class="card-body">
-                            <h5 class="card-title">iPhone 16</h5>
-                            <p class="card-text">The all-new iPhone 16 delivers enhanced performance, longer battery
-                                life, and an even smoother user experience. With a sleek design and powerful A18 chip,
-                                it's the perfect choice for everyday use.</p>
-                            <a href="#" class="btn btn-secondary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card p-3">
-                        <img src="images/iphone_16_pro.webp" class="card-img-top" alt="iphone">
-                        <div class="card-body">
-                            <h5 class="card-title">iPhone 16 Pro</h5>
-                            <p class="card-text">iPhone 16 Pro pushes the boundaries of mobile technology. Premium
-                                materials, a new ProMotion display, and a pro-level camera system give you the tools to
-                                create, work, and play like never before.</p>
-                            <a href="#" class="btn btn-secondary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="card p-3">
-                        <img src="images/iphone_16_pro_max.webp" class="card-img-top" alt="iphone">
-                        <div class="card-body">
-                            <h5 class="card-title">iPhone 16 Pro Max</h5>
-                            <p class="card-text">Apple’s ultimate iPhone experience. iPhone 16 Pro Max combines top-tier
-                                performance, a stunning display, and professional-grade photography—all in a sleek,
-                                large format. Maximum power, maximum impact.</p>
-                            <a href="#" class="btn btn-secondary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="mb-5" id="team">
+      </nav>
+      <section>
         <div class="container">
             <div class="row text-center">
                 <div class="col ">
-                    <h2>Our Team</h2>
-                    <p>Meet the passionate team behind our Apple-focused website. Each of us brings a unique
-                        perspective, but we're all united by one thing – our love for technology and everything with an
-                        Apple logo.</p>
+                    <h1>Welcome to My Website</h1>
+                    <p>This is a simple webpage using Bootstrap.</p>
                 </div>
+
             </div>
         </div>
+      </section>
+      <section>
         <div class="row justify-content-center gx-5">
-            <div class="card col-2 justify-content-center mx-3 mb-3" style="width: 18rem;">
-                <img src="images/people_1.jpg" class="card-img-top" alt="...">
+            <div class="card col-2 justify-content-center" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Mark Reynolds</h5>
-                    <h6 class="card-title">Tech Editor & Reviewer</h6>
-                    <p class="card-text">Mark is the heart of our content. He puts every new iPhone, MacBook, and Apple
-                        gadget to the test and loves exploring every corner of iOS. He's a big fan of sleek design,
-                        powerful hardware, and spotting even the tiniest differences between product generations.
-                    </p>
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
-            <div class="card col-2 justify-content-center mx-3 mb-3" style="width: 18rem;">
-                <img src="images/people_2.jpg" class="card-img-top" alt="...">
+            <div class="card col-2 justify-content-center" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Sarah Mitchell</h5>
-                    <h6 class="card-title">Content Strategist & Copywriter</h6>
-                    <p class="card-text">Sarah shapes the voice of our website. She turns technical specs into clear,
-                        engaging language and knows how to highlight why a product matters. Beyond Apple, she’s into
-                        clever shortcuts, hidden features, and tips that make everyday use smoother and smarter.
-                    </p>
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
-            <div class="card col-2 justify-content-center mx-3 mb-3" style="width: 18rem;">
-                <img src="images/people_3.jpg" class="card-img-top" alt="...">
+            <div class="card col-2 justify-content-center" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Jake Thompson</h5>
-                    <h6 class="card-title">Web Developer & Apple Geek</h6>
-                    <p class="card-text">Jake is our technical brain. He makes sure the website runs as smoothly as an
-                        Apple Watch. When he’s not coding, he’s diving into the latest updates in macOS, HomeKit, or
-                        iCloud. His favorite thing? When tech “just works.”
-                    </p>
-                </div>
-            </div>
-            <div class="card col-2 justify-content-center mx-3 mb-3" style="width: 18rem;">
-                <img src="images/people_2.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Susan Peterson</h5>
-                    <h6 class="card-title">Web Manager</h6>
-                    <p class="card-text">Senior Marketing Specialist
-                        Susan brings over a decade of experience in tech marketing, blending creativity with strategy to
-                        drive brand growth. Passionate about innovation and customer experience, she ensures every
-                        campaign resonates with the audience.
-                    </p>
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="row mb-5 m-auto justify-content-center" id="contact">
-        <div class="col-md-6">
-            <div class="row">
-                <div class="col text-center">
-                    <h2>Contact Us</h2>
-                </div>
-            </div>
-            <div class="row col-6 m-auto">
-                <div class="col">
-                    <input type="text" class="form-control" placeholder="First name" aria-label="First name">
-                </div>
-                <div class="col">
-                    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1"
-                           placeholder="name@example.com">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                <div class=" w-100 ">
-                    <button type="submit" class="btn btn-secondary bg-secondary">Submit</button>
-                </div>
+      </section>
+      <section>
+
+      </section>
+      <section>
+        <div class="row">
+            <div class="col text-center">
+                <h1>Contact Us</h1>
             </div>
         </div>
-        <div class="col-md-6">
-            <div class="m-auto">
-                <h2>Location</h2>
-                <p>AppleStore Central Inc.
-                    500 Innovation Drive<br>
-                    Suite 1200
-                    San Mateo, CA 94401
-                    United States</p>
+        <div class="row col-3 m-auto">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="First name" aria-label="First name">
             </div>
-            <div class="m-auto">
-                <h2></h2>
-                <i class="fa fa-facebook m-3" style="font-size:36px"></i>
-                <i class="fa fa-instagram m-3" style="font-size:36px"></i>
-                <i class="fa fa-twitter m-3" style="font-size:36px"></i>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
             </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class=" w-100">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            
         </div>
-    </section>
-</main>
-<footer class="bg-light text-center text-lg-start mt-5">
-    <div class="text-center p-3">
-        © 2025 Apple forever. All rights reserved.
-    </div>
-</footer>
-<script src="js/bootstrap.bundle.js"></script>
+        
+      </section>
 </body>
 </html>
