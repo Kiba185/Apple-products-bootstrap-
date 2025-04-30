@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/_custom.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/_custom.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
             <h1 class="text-white">Admin Panel</h1>
             <hr class="text-white">
             <nav class="d-flex flex-column me-auto">
-                <a class="nav-link text-white py-2 px-0" href="">
+                <a class="nav-link text-white py-2 px-0" href="dashboard.html">
                     <i class="fa fa-dashboard" style="font-size:20px;color:white"></i>
                     Dashboard
                 </a>
@@ -34,10 +34,13 @@
                 </a>
             </nav>
             <div class="text-white mt-auto">
+                <a href="index.html">
+                    <button class="btn btn-secondary">Exit</button>
+                </a>
                 <hr class="text-white">
                 <h2 class="text-white mt-auto">
-                    <a class="text-white text-decoration-none" href="index.html">
-                        <i class="fa fa-user" style="font-size:35px;color:white"></i>
+                    <a class="text-white text-decoration-none" href="dashboard.html">
+                        <i class="fa fa-user"></i>
                         Jakub Malota
                     </a>
                 </h2>
@@ -45,10 +48,26 @@
         </div>
         <!-- Content -->
         <div class="col-sm-8 col-md-9 col-lg-10 bg-light vh-100 p-4">
-            <h2>Dashboard</h2>
+            <div class="row">
+                <div class="col-md-5">
+                    <h2 class="m-3">Personal information</h2>
+                    <ul class="list-unstyled m-4">
+                        <li class="my-2"><strong>Name: </strong>Jakub Malota</li>
+                        <li class="my-2"><strong>Email: </strong><a href="mailto:jakub.malota@spspzlin.cz">jakub.malota@spspzlin.cz</a>
+                        </li>
+                        <li class="my-2"><strong>Phone: </strong><a href="tel:+420 587 214 221">+420 587 214 221</a>
+                        </li>
+                        <li class="my-2"><strong>Address: </strong>Nad Ovčírnou IV 25828, 760 01, Zlín</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-center">
+                    <h2 class="m-3">Profile picture</h2>
+                    <img src="../images/profile_photo.jpg" width="200px" class="">
+                </div>
+            </div>
         </div>
     </div>
 </div>
-<script src="js/bootstrap.bundle.js"></script>
+<script src="../js/bootstrap.bundle.js"></script>
 </body>
 </html>
