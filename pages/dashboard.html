@@ -20,15 +20,15 @@
                     <i class="fa fa-dashboard" style="font-size:20px;color:white"></i>
                     Dashboard
                 </a>
-                <a class="nav-link text-white py-2 px-0" href="">
+                <a class="nav-link text-white py-2 px-0" href="products.html">
                     <i class="fa fa-shopping-cart" style="font-size:20px;color:white"></i>
                     Products
                 </a>
-                <a class="nav-link text-white py-2 px-0" href="">
+                <a class="nav-link text-white py-2 px-0" href="orders.html">
                     <i class="fa fa-credit-card" style="font-size:20px;color:white"></i>
                     Orders
                 </a>
-                <a class="nav-link text-white py-2 px-0" href="">
+                <a class="nav-link text-white py-2 px-0" href="users.html">
                     <i class="fa fa-users" style="font-size:20px;color:white"></i>
                     Users
                 </a>
@@ -47,10 +47,74 @@
             </div>
         </div>
         <!-- Content -->
-        <div class="col-sm-8 col-md-9 col-lg-10 bg-light vh-100 p-4">
+        <div class="col-sm-8 col-md-9 col-lg-10 bg-light vh-100 p-4 overflow-auto">
             <h2>Dashboard</h2>
-            <img src="../images/dashboard.jpg" alt="Dashboard" width="100%">
+
+            <div class="row mt-4">
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-header bg-secondary text-white">Daily Visits</div>
+                        <div class="card-body">
+                            <canvas id="barChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-header bg-secondary text-white">User Roles Distribution</div>
+                        <div class="card-body">
+                            <canvas id="pieChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- Chart.js -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script>
+            const barCtx = document.getElementById('barChart').getContext('2d');
+            new Chart(barCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                    datasets: [{
+                        label: 'Visits',
+                        data: [123, 150, 98, 134, 180, 76, 95],
+                        backgroundColor: 'rgba(97,97,97,0.7)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            const pieCtx = document.getElementById('pieChart').getContext('2d');
+            new Chart(pieCtx, {
+                type: 'pie',
+                data: {
+                    labels: ['Admins', 'Customers', 'Guests'],
+                    datasets: [{
+                        data: [15, 70, 15],
+                        backgroundColor: [
+                            'rgba(122,163,163,0.7)',
+                            'rgba(122,121,83,0.7)',
+                            'rgba(94,126,87,0.7)'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true
+                }
+            });
+        </script>
+
     </div>
 </div>
 <script src="../js/bootstrap.bundle.js"></script>

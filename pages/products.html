@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/_custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <!-- Sidebar -->
+        <div class="col-sm-4 col-md-5 col-lg-2 d-flex flex-column bg-dark p-4 vh-100">
+            <h1 class="text-white">Admin Panel</h1>
+            <hr class="text-white">
+            <nav class="d-flex flex-column me-auto">
+                <a class="nav-link text-white py-2 px-0" href="dashboard.html">
+                    <i class="fa fa-dashboard" style="font-size:20px;color:white"></i>
+                    Dashboard
+                </a>
+                <a class="nav-link text-white py-2 px-0" href="products.html">
+                    <i class="fa fa-shopping-cart" style="font-size:20px;color:white"></i>
+                    Products
+                </a>
+                <a class="nav-link text-white py-2 px-0" href="orders.html">
+                    <i class="fa fa-credit-card" style="font-size:20px;color:white"></i>
+                    Orders
+                </a>
+                <a class="nav-link text-white py-2 px-0" href="users.html">
+                    <i class="fa fa-users" style="font-size:20px;color:white"></i>
+                    Users
+                </a>
+            </nav>
+            <div class="text-white mt-auto">
+                <a href="index.html">
+                    <button class="btn btn-secondary">Exit</button>
+                </a>
+                <hr class="text-white">
+                <h2 class="text-white mt-auto">
+                    <a class="text-white text-decoration-none" href="user-profile.html">
+                        <i class="fa fa-user"></i>
+                        Jakub Malota
+                    </a>
+                </h2>
+            </div>
+        </div>
+        <!-- Content -->
+        <div class="col-sm-8 col-md-9 col-lg-10 bg-light vh-100 p-4">
+            <h2>Products</h2>
+
+            <!-- Filter Dropdown -->
+            <div class="mb-3">
+                <label for="productFilter" class="form-label">Filter by category:</label>
+                <select id="productFilter" class="form-select w-auto" onchange="filterProducts(this.value)">
+                    <option value="all">All</option>
+                    <option value="iphone">iPhones</option>
+                    <option value="mac">Macs</option>
+                    <option value="ipad">iPads</option>
+                    <option value="audio">Audio</option>
+                    <option value="accessory">Accessories</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <button class="btn btn-secondary mb-3" data-bs-toggle="modal" data-bs-target="#addProductModal">Add Product
+            </button>
+            <div class="table-container">
+                <table class="table table-hover">
+                    <thead class="table-head">
+                    <tr>
+                        <th>#</th>
+                        <th>Product ID</th>
+                        <th>Name</th>
+                        <th>Price ($)</th>
+                        <th>Note</th>
+                    </tr>
+                    </thead>
+                    <tbody id="productTable">
+                    <tr data-category="iphone">
+                        <td>1</td>
+                        <td>APL-001</td>
+                        <td>iPhone 15 Pro Max</td>
+                        <td>1199.00</td>
+                        <td>6.7", A17 Pro chip, Titanium</td>
+                    </tr>
+                    <tr data-category="iphone">
+                        <td>2</td>
+                        <td>APL-002</td>
+                        <td>iPhone 15 Pro</td>
+                        <td>999.00</td>
+                        <td>6.1", A17 Pro chip</td>
+                    </tr>
+                    <tr data-category="iphone">
+                        <td>3</td>
+                        <td>APL-003</td>
+                        <td>iPhone 15</td>
+                        <td>799.00</td>
+                        <td>6.1", A16 chip, Dynamic Island</td>
+                    </tr>
+                    <tr data-category="iphone">
+                        <td>4</td>
+                        <td>APL-004</td>
+                        <td>iPhone 15 Plus</td>
+                        <td>899.00</td>
+                        <td>6.7", A16 chip</td>
+                    </tr>
+                    <tr data-category="iphone">
+                        <td>5</td>
+                        <td>APL-005</td>
+                        <td>iPhone 14 Pro</td>
+                        <td>999.00</td>
+                        <td>6.1", A16 chip</td>
+                    </tr>
+                    <tr data-category="iphone">
+                        <td>6</td>
+                        <td>APL-006</td>
+                        <td>iPhone 13</td>
+                        <td>699.00</td>
+                        <td>6.1", A15 chip</td>
+                    </tr>
+                    <tr data-category="iphone">
+                        <td>7</td>
+                        <td>APL-007</td>
+                        <td>iPhone SE (3rd Gen)</td>
+                        <td>429.00</td>
+                        <td>4.7", A15 chip, Touch ID</td>
+                    </tr>
+                    <tr data-category="iphone">
+                        <td>8</td>
+                        <td>APL-008</td>
+                        <td>iPhone 12 Mini</td>
+                        <td>599.00</td>
+                        <td>5.4", A14 chip</td>
+                    </tr>
+                    <tr data-category="mac">
+                        <td>9</td>
+                        <td>APL-009</td>
+                        <td>MacBook Air 13" M2</td>
+                        <td>1099.00</td>
+                        <td>8GB RAM, 256GB SSD</td>
+                    </tr>
+                    <tr data-category="mac">
+                        <td>10</td>
+                        <td>APL-010</td>
+                        <td>MacBook Pro 14" M3</td>
+                        <td>1999.00</td>
+                        <td>Liquid Retina XDR</td>
+                    </tr>
+                    <tr data-category="ipad">
+                        <td>11</td>
+                        <td>APL-011</td>
+                        <td>iPad Pro 11" (M4)</td>
+                        <td>999.00</td>
+                        <td>Apple Pencil Pro support</td>
+                    </tr>
+                    <tr data-category="ipad">
+                        <td>12</td>
+                        <td>APL-012</td>
+                        <td>iPad Air 11" (M2)</td>
+                        <td>599.00</td>
+                        <td>USB-C, Touch ID</td>
+                    </tr>
+                    <tr data-category="accessory">
+                        <td>13</td>
+                        <td>APL-013</td>
+                        <td>Apple Watch Series 9</td>
+                        <td>399.00</td>
+                        <td>Always-On Retina</td>
+                    </tr>
+                    <tr data-category="audio">
+                        <td>14</td>
+                        <td>APL-014</td>
+                        <td>AirPods Pro (2nd Gen)</td>
+                        <td>249.00</td>
+                        <td>Noise Cancellation</td>
+                    </tr>
+                    <tr data-category="audio">
+                        <td>15</td>
+                        <td>APL-015</td>
+                        <td>AirPods Max</td>
+                        <td>549.00</td>
+                        <td>Over-ear, Spatial Audio</td>
+                    </tr>
+                    <tr data-category="audio">
+                        <td>16</td>
+                        <td>APL-016</td>
+                        <td>HomePod mini</td>
+                        <td>99.00</td>
+                        <td>360° audio</td>
+                    </tr>
+                    <tr data-category="other">
+                        <td>17</td>
+                        <td>APL-017</td>
+                        <td>Apple TV 4K (3rd Gen)</td>
+                        <td>129.00</td>
+                        <td>HDR10+</td>
+                    </tr>
+                    <tr data-category="accessory">
+                        <td>18</td>
+                        <td>APL-018</td>
+                        <td>Magic Keyboard</td>
+                        <td>99.00</td>
+                        <td>Rechargeable</td>
+                    </tr>
+                    <tr data-category="mac">
+                        <td>19</td>
+                        <td>APL-019</td>
+                        <td>Studio Display</td>
+                        <td>1599.00</td>
+                        <td>27" 5K Retina</td>
+                    </tr>
+                    <tr data-category="mac">
+                        <td>20</td>
+                        <td>APL-020</td>
+                        <td>Mac Studio (M2 Max)</td>
+                        <td>1999.00</td>
+                        <td>32GB RAM</td>
+                    </tr>
+                    <tr data-category="other">
+                        <td>21</td>
+                        <td>APL-021</td>
+                        <td>Apple Vision Pro</td>
+                        <td>3499.00</td>
+                        <td>Spatial computing</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="addProductModal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Add Product</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <input class="form-control mb-2" placeholder="Product Name">
+                                <input class="form-control mb-2" placeholder="Price">
+                                <input class="form-control mb-2" placeholder="Note">
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-success">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function filterProducts(category) {
+                const rows = document.querySelectorAll('#productTable tr');
+                rows.forEach(row => {
+                    if (category === 'all' || row.dataset.category === category) {
+                        row.style.display = '';
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+            }
+        </script>
+
+
+    </div>
+</div>
+<script src="../js/bootstrap.bundle.js"></script>
+</body>
+</html>

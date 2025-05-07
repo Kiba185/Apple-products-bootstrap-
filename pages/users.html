@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin</title>
+  <link rel="stylesheet" href="../css/bootstrap.css">
+  <link rel="stylesheet" href="../css/_custom.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-sm-4 col-md-5 col-lg-2 d-flex flex-column bg-dark p-4 vh-100">
+      <h1 class="text-white">Admin Panel</h1>
+      <hr class="text-white">
+      <nav class="d-flex flex-column me-auto">
+        <a class="nav-link text-white py-2 px-0" href="dashboard.html">
+          <i class="fa fa-dashboard" style="font-size:20px;color:white"></i>
+          Dashboard
+        </a>
+        <a class="nav-link text-white py-2 px-0" href="products.html">
+          <i class="fa fa-shopping-cart" style="font-size:20px;color:white"></i>
+          Products
+        </a>
+        <a class="nav-link text-white py-2 px-0" href="orders.html">
+          <i class="fa fa-credit-card" style="font-size:20px;color:white"></i>
+          Orders
+        </a>
+        <a class="nav-link text-white py-2 px-0" href="users.html">
+          <i class="fa fa-users" style="font-size:20px;color:white"></i>
+          Users
+        </a>
+      </nav>
+      <div class="text-white mt-auto">
+        <a href="index.html">
+          <button class="btn btn-secondary">Exit</button>
+        </a>
+        <hr class="text-white">
+        <h2 class="text-white mt-auto">
+          <a class="text-white text-decoration-none" href="user-profile.html">
+            <i class="fa fa-user"></i>
+            Jakub Malota
+          </a>
+        </h2>
+      </div>
+    </div>
+    <!-- Content -->
+    <div class="col-sm-8 col-md-9 col-lg-10 bg-light vh-100 p-4">
+      <h2>Users</h2>
+      <button class="btn btn-secondary mb-3" data-bs-toggle="modal" data-bs-target="#addUserModal">Add User</button>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr><td>1</td><td>John Smith</td><td>john.smith@applecompany.com</td><td>+1 202 555 0101</td><td>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Delete</a></li>
+              <li><a class="dropdown-item" href="#">Details</a></li>
+            </ul>
+          </div>
+        </td></tr>
+        <tr><td>2</td><td>Emma Johnson</td><td>emma.johnson@applecompany.com</td><td>+1 202 555 0134</td><td>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Delete</a></li>
+              <li><a class="dropdown-item" href="#">Details</a></li>
+            </ul>
+          </div>
+        </td></tr>
+        <tr><td>3</td><td>Michael Lee</td><td>michael.lee@applecompany.com</td><td>+1 202 555 0175</td><td>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Delete</a></li>
+              <li><a class="dropdown-item" href="#">Details</a></li>
+            </ul>
+          </div>
+        </td></tr>
+        <tr><td>4</td><td>Olivia Davis</td><td>olivia.davis@applecompany.com</td><td>+1 202 555 0118</td><td>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Delete</a></li>
+              <li><a class="dropdown-item" href="#">Details</a></li>
+            </ul>
+          </div>
+        </td></tr>
+        <tr><td>5</td><td>James Wilson</td><td>james.wilson@applecompany.com</td><td>+1 202 555 0156</td><td>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Delete</a></li>
+              <li><a class="dropdown-item" href="#">Details</a></li>
+            </ul>
+          </div>
+        </td></tr>
+        <tr><td>6</td><td>Sophia Brown</td><td>sophia.brown@applecompany.com</td><td>+1 202 555 0123</td><td>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Delete</a></li>
+              <li><a class="dropdown-item" href="#">Details</a></li>
+            </ul>
+          </div>
+        </td></tr>
+        <tr><td>7</td><td>Daniel Garcia</td><td>daniel.garcia@applecompany.com</td><td>+1 202 555 0199</td><td>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">Actions</button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Delete</a></li>
+              <li><a class="dropdown-item" href="#">Details</a></li>
+            </ul>
+          </div>
+        </td></tr>
+        </tbody>
+      </table>
+
+      <!-- Modal -->
+      <div class="modal fade" id="addUserModal" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Add User</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <input class="form-control mb-2" placeholder="Full Name">
+                <input class="form-control mb-2" placeholder="Email">
+                <input class="form-control mb-2" placeholder="Phone Number">
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-success">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+<script src="../js/bootstrap.bundle.js"></script>
+</body>
+</html>
